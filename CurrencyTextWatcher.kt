@@ -22,6 +22,7 @@ class CurrencyTextWatcher(val textInputEditText: TextInputEditText) : TextWatche
         textInputEditText.text?.length?.let {
             textInputEditText.setSelection(it)
         }
+        textInputEditText.addTextChangedListener(this)
     }
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
